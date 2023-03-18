@@ -23,15 +23,15 @@ export default {
   },
   methods: {
     async signUp() {
-      let result = await axios.post('http://localhost:3000/user', {
+      let result = await axios.post('http://localhost:3000/users', {
         name: this.name,
         email: this.email,
         password: this.password,
       })
       console.log(result)
-      if(result.status == 201){
-        alert("OK !!!!")
+      if (result.status === 201) {
         localStorage.setItem('user-info', JSON.stringify(result.data))
+        this.$router.push({name: 'HomePage'})
       }
     }
   }
