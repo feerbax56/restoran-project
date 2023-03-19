@@ -5,7 +5,10 @@
     <input type="text" placeholder="Enter Name" v-model="name">
     <input type="text" placeholder="Enter Email" v-model="email">
     <input type="text" placeholder="Enter Password" v-model="password">
-    <button v-on:click="signUp">SignUp</button>
+    <button>SignUp</button>
+    <p>
+      <router-link to="/login">Login</router-link>
+    </p>
   </div>
 </template>
 
@@ -34,34 +37,17 @@ export default {
         this.$router.push({name: 'HomePage'})
       }
     }
+  },
+  mounted() {
+    let user = localStorage.getItem('user-info')
+
+    if (user) {
+      this.$router.push({name: 'HomePage'})
+    }
   }
 }
 </script>
 
 <style>
-.logo {
-  width: 100px;
-}
 
-.register {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 300px;
-  margin: 0 auto;
-}
-
-.register input {
-  border-radius: 5px;
-  border: 1px solid skyblue;
-}
-
-.register button {
-  width: 300px;
-  height: 40px;
-  border: 1px solid skyblue;
-  background: skyblue;
-  color: white;
-  cursor: pointer;
-}
 </style>
