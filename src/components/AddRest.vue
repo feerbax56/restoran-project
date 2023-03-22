@@ -1,7 +1,7 @@
-<template>
+Home.vue<template>
   <Header/>
   <h1>
-    Hello {{ name }}, welcome to home page
+    Hello username, welcome and Add Restaurant Page
   </h1>
 </template>
 
@@ -10,14 +10,13 @@ import Header from "@/components/Header.vue";
 
 export default {
 
-  name: 'HomePage',
+  name: 'AddRest',
   components: {
     Header
   },
   mounted() {
-    let user = localStorage.getItem('user-info');
-    this.name = JSON.parse(user).name;
-    console.log(name);
+    let user = localStorage.getItem('user-info')
+
     if (!user) {
       this.$router.push({name: 'SignUp'})
     }
