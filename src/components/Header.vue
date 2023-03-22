@@ -3,22 +3,29 @@
     <a href="#">Home</a>
     <a href="#">Add Restaurant</a>
     <a href="#">Update Restaurant</a>
-    <a href="#">Logout</a>
+    <a href="#" v-on:click="logout">Logout</a>
   </div>
 </template>
 
 <script>
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Header'
+  name: 'Header',
+  methods: {
+    logout() {
+      localStorage.clear()
+      this.$router.push({name: 'LogIn'})
+    }
+  }
 }
 </script>
 <style>
-.nav{
+.nav {
   background-color: #2c3e50;
   overflow: hidden;
 }
-.nav a{
+
+.nav a {
   float: left;
   color: skyblue;
   padding: 18px 14px;
@@ -27,7 +34,8 @@ export default {
   text-decoration: none;
   margin-right: 10px;
 }
-.nav a:hover{
+
+.nav a:hover {
   background-color: blue;
   color: white;
 }
