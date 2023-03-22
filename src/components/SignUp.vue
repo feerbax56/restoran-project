@@ -5,7 +5,7 @@
     <input type="text" placeholder="Enter Name" v-model="name">
     <input type="text" placeholder="Enter Email" v-model="email">
     <input type="text" placeholder="Enter Password" v-model="password">
-    <button>SignUp</button>
+    <button v-on:click="signUp">SignUp</button>
     <p>
       <router-link to="/login">Login</router-link>
     </p>
