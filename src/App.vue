@@ -26,7 +26,7 @@ body{
   width: 100px;
 }
 
-.register, .login {
+.register, .login, .add {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -34,13 +34,13 @@ body{
   margin: 0 auto;
 }
 
-.register input, .login input {
+.register input, .login input, .add input {
   border-radius: 5px;
   border: 1px solid skyblue;
   height: 30px;
 }
 
-.register button, .login button {
+.register button, .login button, .add button {
   width: 300px;
   height: 40px;
   border: 1px solid skyblue;
