@@ -11,6 +11,12 @@
       "email": "wfewef",
       "password": "wefwfe",
       "id": 2
+    },
+    {
+      "name": "333",
+      "email": "4444",
+      "password": "5555",
+      "id": 3
     }
   ],
   "restaurant": [
@@ -55,6 +61,12 @@
       "address": "bwerbvbr",
       "contact": "erberr",
       "id": 7
+    },
+    {
+      "name": "67",
+      "address": "67",
+      "contact": "67",
+      "id": 8
     }
   ]
 }

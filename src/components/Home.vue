@@ -3,13 +3,14 @@
   <h1>
     Hello {{ name }}, welcome to home page
   </h1>
-  <table border="1">
+  <table class="table">
 
     <tr>
       <td>Id</td>
       <td>Name</td>
-      <td>contact</td>
-      <td>address</td>
+      <td>Contact</td>
+      <td>Address</td>
+      <td>Actions</td>
     </tr>
 
     <tr v-for="item in restaurant" :key=item.id>
@@ -17,6 +18,9 @@
       <td>{{ item.name }}</td>
       <td>{{ item.contact }}</td>
       <td>{{ item.address }}</td>
+      <td>
+        <router-link :to="'/UpdateRest/' + item.id">Update</router-link>
+      </td>
     </tr>
 
   </table>
@@ -56,5 +60,11 @@ export default {
 td {
   width: 160px;
   height: 40px;
+  border: 1px solid blueviolet;
 }
+
+.table {
+  margin: 0 auto;
+}
+
 </style>
