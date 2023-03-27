@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "name": "feerbax",
+      "email": "feerbax@test",
+      "password": "abc@123",
+      "id": 1
+    },
+    {
+      "name": "wefwf",
+      "email": "wfewef",
+      "password": "wefwfe",
+      "id": 2
+    }
+  ],
+  "restaurant": [
+    {
+      "id": 1,
+      "name": "Coma",
+      "contact": "11313123",
+      "address": "logan street 33"
+    },
+    {
+      "id": 2,
+      "name": "COcaLLL",
+      "contact": "22222",
+      "address": "Vostok street 33"
+    }
+  ]
+}

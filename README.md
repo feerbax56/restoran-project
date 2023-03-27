@@ -1,5 +1,10 @@
 # restoran-project
 
+## start json server
+```
+json-server --watch db.json
+```
+
 ## Project setup
 ```
 npm install
