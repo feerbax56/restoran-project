@@ -27,10 +27,10 @@
   ],
   "restaurant": [
     {
-      "id": 1,
-      "name": "Coma",
+      "name": "Coma333",
+      "address": "logan street 33",
       "contact": "11313123",
-      "address": "logan street 33"
+      "id": 1
     },
     {
       "id": 2,
@@ -63,7 +63,7 @@
       "id": 6
     },
     {
-      "name": "wefqwvb",
+      "name": "wefqwvb333",
       "address": "bwerbvbr",
       "contact": "erberr",
       "id": 7
