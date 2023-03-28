@@ -17,6 +17,12 @@
       "email": "4444",
       "password": "5555",
       "id": 3
+    },
+    {
+      "name": "12",
+      "email": "23",
+      "password": "34",
+      "id": 4
     }
   ],
   "restaurant": [
