@@ -19,7 +19,9 @@
       <td>{{ item.contact }}</td>
       <td>{{ item.address }}</td>
       <td>
-        <router-link :to="'/UpdateRest/' + item.id">Update</router-link>
+        <router-link :to="'/UpdateRest/' + item.id">
+          <button class="updBtn">Update</button></router-link>
+        <button v-on:click="deleteRestaurant(item.id)" class="delBtn">Delete</button>
       </td>
     </tr>
 
@@ -42,15 +44,25 @@ export default {
   components: {
     Header
   },
-  async mounted() {
-    let user = localStorage.getItem('user-info');
-    this.name = JSON.parse(user).name;
-    console.log(name);
-    if (!user) {
-      this.$router.push({name: 'SignUp'})
+  methods: {
+    async deleteRestaurant(id) {
+      let resalt = await axios.delete('http://localhost:3000/restaurant/' + id)
+      if (resalt.status === 200) {
+        this.loadData()
+      }
+    },
+    async loadData() {
+      let user = localStorage.getItem('user-info');
+      this.name = JSON.parse(user).name;
+      if (!user) {
+        this.$router.push({name: 'SignUp'})
+      }
+      let result = await axios.get('http://localhost:3000/restaurant');
+      this.restaurant = result.data
     }
-    let result = await axios.get('http://localhost:3000/restaurant');
-    this.restaurant = result.data
+  },
+  async mounted() {
+    this.loadData()
   }
 }
 </script>
@@ -65,6 +77,15 @@ td {
 
 .table {
   margin: 0 auto;
+}
+.delBtn{
+  margin: 6px;
+  background-color: coral;
+}
+
+.updBtn{
+  margin: 6px;
+  background-color: chartreuse;
 }
 
 </style>

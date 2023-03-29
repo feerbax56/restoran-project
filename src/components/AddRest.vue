@@ -2,7 +2,7 @@ Home.vue
 <template>
   <Header/>
   <h1>
-    Hello username, welcome and Add Restaurant Page
+    Hello {{name}}, welcome and Add Restaurant Page
   </h1>
 
   <form action="" class="add">
@@ -29,7 +29,8 @@ export default {
         name: '',
         address: '',
         contact: '',
-      }
+      },
+      name: '',
     }
   },
   methods: {
@@ -46,7 +47,7 @@ export default {
   },
   mounted() {
     let user = localStorage.getItem('user-info')
-
+    this.name = JSON.parse(user).name;
     if (!user) {
       this.$router.push({name: 'SignUp'})
     }
